@@ -120,16 +120,8 @@ input[type='range'] {
     background-color: transparent;
 }
 
-/* .ryx__property__calculator__area::after {
-    content: '';
-    margin-top: 20px;
-    height: 5px;
-    width: 1019px;
-    background-color: #d8d8d8;
-} */
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    /* Chrome */
+/* @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    Chrome
     input[type='range']::-webkit-slider-thumb {
         background-image: url('../assets/images/s-icon.png') !important;
         height: 31px;
@@ -147,6 +139,32 @@ input[type='range'] {
         height: 10px;
         border-radius: 5px;
     }
+} */
+
+input[type='range'] {
+    -webkit-appearance: none;
+    width: 100%;
+    outline: none;
+    background-color: #000;
+}
+
+/* Chrome   */
+input[type='range']::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background-color: #9a905d;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+input[type='range']::-webkit-slider-thumb {
+    background-image: url('../assets/images/s-icon.png');
+    height: 31px;
+    width: 19px;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    -webkit-appearance: none;
+    margin-top: -10px;
 }
 
 /** FF*/
