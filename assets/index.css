@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+/* hero section */
+:root {
+    --font-polyFair: 'Playfair Display', serif !important;
+    --brand-color: #deb118 !important;
+}
+
+.ryx__hero {
+    background: url('../assets/images/bg_dark_shade.png'), url('../assets/images/bg.png') !important;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 779px;
+}
+
+.ryx__display__center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.ryx__section__title {
+    color: var(--brand-color);
+    font-size: 56px;
+    font-weight: normal;
+    padding-top: 289px;
+    margin: 0px;
+    padding-bottom: 0px;
+    font-family: var(--font-polyFair);
+}
+
+.ryx__section__description {
+    color: #fff;
+    font-size: 26px !important;
+    font-weight: 100 !important;
+    padding-top: 11px !important;
+    margin: 0px !important;
+    width: 814px;
+    text-align: center;
+    line-height: 35px !important;
+    letter-spacing: 0px;
+    font-family: var(--font-polyFair);
+}
+
+.ryx__property__calculator__area {
+    margin-top: 59px;
+    margin-left: 450px;
+    margin-right: 450px;
+    width: 1019px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 40px;
+}
+
+.ryx__paymentCalculation {
+    margin-top: 59px;
+    margin-left: 450px;
+    margin-right: 450px;
+    width: 1019px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ryx__justify-content-between {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ryx__property-price {
+    color: var(--brand-color);
+    font-family: var(--font-polyFair);
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.ryx__property-price-range {
+    font-weight: 300;
+    font-size: 30px;
+    padding: 10px 35px 15px 35px !important;
+    border: 1px solid #d0a616;
+    margin: 0rem;
+    border-radius: 13px;
+}
+
+#ryx__propertyPriceRange,
+#ryx__downPaymentPercentRange,
+#ryx__loanDurationRange,
+#ryx__interestRateRange {
+    width: 1019px;
+    margin: 21px 0 12px 0;
+}
+
+.ryx__downPayment {
+    padding: 24px 0px;
+}
+
+.ryx__rangeStart,
+.ryx__rangeEnd {
+    color: #d0a616;
+    font-size: 17px;
+    padding: 0px 0 !important;
+    margin: 0px !important;
+    height: 22px;
+}
+
+.ryx__downPaymentPercent span {
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+}
+/* hero section end */
+
+input[type='range'] {
+    background-color: transparent;
+}
+
+/* .ryx__property__calculator__area::after {
+    content: '';
+    margin-top: 20px;
+    height: 5px;
+    width: 1019px;
+    background-color: #d8d8d8;
+} */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    /* Chrome */
+    input[type='range']::-webkit-slider-thumb {
+        background-image: url('../assets/images/s-icon.png') !important;
+        height: 31px;
+        width: 19px;
+        margin-top: -3px;
+        background-position: center;
+        background-size: cover;
+        color: transparent !important;
+    }
+    input[type='range']::-webkit-slider-runnable-track {
+        -webkit-appearance: none;
+
+        background-color: #9a905d;
+        width: 100%;
+        height: 10px;
+        border-radius: 5px;
+    }
+}
+
+/** FF*/
+input[type='range']::-moz-range-thumb {
+    background-image: url('../assets/images/s-icon.png');
+    height: 31px;
+    width: 19px;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    border: 0px;
+}
+
+input[type='range']::-moz-range-progress {
+    background-color: #d8d8d8eb;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+input[type='range']::-moz-range-track {
+    background-color: #9a905d;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+/* IE*/
+input[type='range']::-ms-fill-lower {
+    background-image: url('../assets/images/s-icon.png');
+    height: 31px;
+    width: 19px;
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    border: 0px;
+}
+input[type='range']::-ms-fill-upper {
+    background-color: #9a905d;
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.ryx__monthlyPaymentTable table.table,
+.ryx__monthlyPaymentTable table,
+.ryx__monthlyPaymentTable table tr,
+.ryx__monthlyPaymentTable table tr td {
+    border: 1px solid #d0a616 !important;
+    width: 535px;
+}
+
+.tableRowTitle {
+    font-size: 17px;
+    color: #d0a616;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.tableRowValue {
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+}
