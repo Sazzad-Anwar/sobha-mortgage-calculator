@@ -48,22 +48,26 @@
 
 .ryx__property__calculator__area {
     margin-top: 59px;
-    margin-left: 450px;
+    /* margin-left: 450px;
     margin-right: 450px;
-    width: 1019px;
+    width: 1019px; */
     margin-bottom: 1rem;
     border-bottom: 1px solid #d8d8d8;
     padding-bottom: 40px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .ryx__paymentCalculation {
     margin-top: 59px;
-    margin-left: 450px;
+    /* margin-left: 450px;
     margin-right: 450px;
-    width: 1019px;
+    width: 1019px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .ryx__justify-content-between {
@@ -86,13 +90,27 @@
     border: 1px solid #d0a616;
     margin: 0rem;
     border-radius: 13px;
+    width: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ryx__property-price-range input {
+    background: transparent;
+    outline: none;
+    border: none;
+    font-weight: 300;
+    font-size: 30px;
+    color: #fff !important;
+    padding-left: 1rem;
 }
 
 #ryx__propertyPriceRange,
 #ryx__downPaymentPercentRange,
 #ryx__loanDurationRange,
 #ryx__interestRateRange {
-    width: 1019px;
+    width: 100%;
     margin: 21px 0 12px 0;
 }
 
@@ -145,7 +163,11 @@ input[type='range'] {
     -webkit-appearance: none;
     width: 100%;
     outline: none;
-    background-color: #000;
+    background-color: grey;
+}
+
+input[type='range']:focus {
+    background-color: grey !important;
 }
 
 /* Chrome   */
@@ -154,7 +176,7 @@ input[type='range']::-webkit-slider-runnable-track {
     background-color: #9a905d;
     width: 100%;
     height: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
 }
 input[type='range']::-webkit-slider-thumb {
     background-image: url('../assets/images/s-icon.png');
@@ -208,23 +230,153 @@ input[type='range']::-ms-fill-upper {
     border-radius: 5px;
 }
 
-.ryx__monthlyPaymentTable table.table,
-.ryx__monthlyPaymentTable table,
-.ryx__monthlyPaymentTable table tr,
-.ryx__monthlyPaymentTable table tr td {
+.ryx__monthlyPaymentTable.ryx__table,
+.ryx__monthlyPaymentTable tr,
+.ryx__monthlyPaymentTable tr td {
     border: 1px solid #d0a616 !important;
     width: 535px;
 }
 
-.tableRowTitle {
+.ryx__tableRowTitle {
     font-size: 17px;
     color: #d0a616;
     font-weight: lighter;
     text-align: center;
 }
 
-.tableRowValue {
+.ryx__tableRowValue {
     font-size: 25px;
     color: #fff;
     text-align: center;
+}
+
+.ryx__monthlyPaymentChart h1 {
+    font-size: 25px;
+    font-weight: normal;
+    color: #d0a616;
+}
+
+.ryx__monthlyPaymentChart h3 {
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ryx__title {
+    color: #deb118 !important;
+    font-size: 25px !important;
+    text-align: center !important;
+    text-transform: uppercase;
+    margin: 44px 0 25px 0;
+}
+
+.ryx__table.ryx__feesBreakDown {
+    width: 535px;
+}
+
+.ryx__table.ryx__feesBreakDown ul li div {
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 28px 0;
+}
+
+.ryx__table.ryx__feesBreakDown ul li div:nth-child(2) {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.table.ryx__feesBreakDown td {
+    border: 1px solid #deb118;
+    width: 50%;
+}
+
+.ryx__table.ryx__feesBreakDown ul li {
+    border: 1px solid #deb118;
+    padding: 0 31px;
+    width: 535px;
+}
+
+.ryx__table.ryx__feesBreakDown ul {
+    padding-left: 0px;
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1320px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        max-width: 1140 px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 960 px;
+    }
+
+    .ryx__paymentCalculation {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 720 px;
+    }
+
+    .ryx__paymentCalculation {
+        flex-direction: column;
+    }
+
+    .ryx__paymentCalculation {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .container,
+    .container-sm {
+        max-width: 540 px;
+    }
+
+    .ryx__property__calculator__area,
+    .ryx__paymentCalculation {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .ryx__paymentCalculation {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .ryx__property__calculator__area,
+    .ryx__paymentCalculation {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .ryx__paymentCalculation {
+        flex-direction: column;
+    }
 }

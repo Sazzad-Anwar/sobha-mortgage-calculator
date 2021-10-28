@@ -1359,13 +1359,22 @@
         </style>
 
         <link rel="stylesheet" href="./assets/index.css" />
-
         <script
             defer
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"
         ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"
+        />
+        <!-- <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        /> -->
         <script defer src="./assets/index.js"></script>
     </head>
     <body class="lng en">
@@ -1382,13 +1391,15 @@
             </div>
         </section>
 
-        <section class="ryx__property__calculator__area">
+        <section class="ryx__property__calculator__area container">
             <div>
                 <div class="ryx__justify-content-between">
                     <h1 class="ryx__property-price">Property Price</h1>
                     <p class="ryx__property-price-range">
                         <span>AED</span>
-                        <span id="ryx__price"></span>
+                        <span>
+                            <input type="text" maxlength="8" id="ryx__price" />
+                        </span>
                     </p>
                 </div>
                 <input
@@ -1405,7 +1416,7 @@
             </div>
 
             <!-- down Payment area -->
-            <div class="ryx__downPayment">
+            <div class="ryx__downPayment container">
                 <div class="ryx__justify-content-between">
                     <h1 class="ryx__property-price">Down Payment</h1>
                     <p class="ryx__downPaymentPercent">
@@ -1428,7 +1439,7 @@
             </div>
 
             <!-- year duration -->
-            <div class="ryx__downPayment">
+            <div class="ryx__downPayment container">
                 <div class="ryx__justify-content-between">
                     <h1 class="ryx__property-price">Loan Duration</h1>
                     <p class="ryx__downPaymentPercent">
@@ -1450,7 +1461,7 @@
             </div>
 
             <!-- interest rate -->
-            <div class="ryx__downPayment">
+            <div class="ryx__downPayment container">
                 <div class="ryx__justify-content-between">
                     <h1 class="ryx__property-price">Interest Rate/Year</h1>
                     <p class="ryx__downPaymentPercent">
@@ -1473,33 +1484,82 @@
             </div>
         </section>
 
-        <section class="ryx__paymentCalculation">
+        <section class="ryx__paymentCalculation container">
             <div class="ryx__monthlyPaymentChart">
-                <h1>Chart</h1>
+                <h1>Estimated Monthly Payment</h1>
+                <h3><span id="monthlyAED"></span> AED/MONTH</h3>
+                <canvas
+                    width="223"
+                    height="222"
+                    id="myChart"
+                    style="background-color: #000"
+                ></canvas>
             </div>
-            <div class="ryx__monthlyPaymentTable">
-                <table class="table" bordercolor="#d0a616">
+            <div class="">
+                <table class="ryx__table ryx__monthlyPaymentTable" bordercolor="#d0a616">
                     <tbody>
                         <tr>
-                            <td class="tableRowTitle">
+                            <td class="ryx__tableRowTitle">
                                 Total Monthly <br />
                                 Payment
                             </td>
-                            <td class="tableRowTitle">
+                            <td class="ryx__tableRowTitle">
                                 Down <br />
                                 Payment
                             </td>
                         </tr>
                         <tr>
-                            <td class="tableRowValue">AED 5255</td>
-                            <td class="tableRowValue">AED 5255</td>
+                            <td class="ryx__tableRowValue">
+                                AED <span id="monthlyPayment"></span>
+                            </td>
+                            <td class="ryx__tableRowValue">AED <span id="downPayment"></span></td>
                         </tr>
                     </tbody>
                 </table>
+
+                <h1 class="ryx__title">Fees Breakdown</h1>
+
+                <div class="ryx__table ryx__feesBreakDown" bordercolor="#d0a616">
+                    <ul>
+                        <li class="ryx__tableRowTitle ryx__justify-content-between">
+                            <div>Land Department fees</div>
+                            <div>
+                                AED <span id="landFee"></span>
+                                <i class="bi bi-exclamation-circle" style="font-size: 16px"></i>
+                            </div>
+                        </li>
+                        <li class="ryx__tableRowTitle ryx__justify-content-between">
+                            <div>Registration Fees</div>
+                            <div>
+                                AED <span id="registrationFee"></span>
+                                <i class="bi bi-exclamation-circle" style="font-size: 16px"></i>
+                            </div>
+                        </li>
+                        <li class="ryx__tableRowTitle ryx__justify-content-between">
+                            <div>Mortgage Registration Fees</div>
+                            <div>
+                                AED <span id="mortgageRegistrationFee"></span>
+                                <i class="bi bi-exclamation-circle" style="font-size: 16px"></i>
+                            </div>
+                        </li>
+                        <li class="ryx__tableRowTitle ryx__justify-content-between">
+                            <div>Evaluation fees</div>
+                            <div>
+                                AED <span id="evaluationFee"></span>
+                                <i class="bi bi-exclamation-circle" style="font-size: 16px"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <!-- body part end -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+        <!-- <script
+            type="text/javascript"
+            src="https://canvasjs.com/assets/script/canvasjs.min.js"
+        ></script> -->
 
         <script
             language="javascript"
